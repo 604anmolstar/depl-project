@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Slider_images.css";
-
-import image1 from "./Slider_images/WhatsApp Image 2024-05-04 at 09.11.40_4ce8c3c3.jpg";
+import image1 from "./Slider_images/84770f_6ae4822c69ed4fb48148b9e04fc0702b~mv2.jpg";
 import image2 from "./Slider_images/WhatsApp Image 2024-05-04 at 09.11.40_9f76b04b.jpg";
 import image3 from "./Slider_images/WhatsApp Image 2024-05-04 at 09.11.40_c2776e76.jpg";
+import image4 from "./Slider_images/WhatsApp Image 2024-05-04 at 09.11.40_4ce8c3c3.jpg";
 
-const images = [image1, image2, image3];
+const images = [image1, image2, image3, image4];
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,7 +33,7 @@ const Slider = () => {
   return (
     <div className="slider-container ">
       <div className="image-container zindex">
-        <img src={images[currentIndex]} alt={`Slide ${currentIndex}`}   />
+        <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
       </div>
       <button className="prev-button" onClick={prevSlide}>
         <svg
