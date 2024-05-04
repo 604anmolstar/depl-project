@@ -2,8 +2,9 @@
 .slider-container {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 600px;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .image-container {
@@ -26,17 +27,25 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   color: white;
-  border: none;
-  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 50%; /* Rounded buttons */
+  padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  opacity: 0; /* Initially hide the buttons */
+}
+
+.slider-container:hover .prev-button,
+.slider-container:hover .next-button {
+  opacity: 1; /* Show the buttons on hover */
 }
 
 .prev-button:hover,
 .next-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background on hover */
+  transform: scale(1.1); /* Scale up on hover */
 }
 
 .prev-button {
@@ -45,4 +54,7 @@
 
 .next-button {
   right: 10px;
+}
+.zindex{
+  z-index: -1;
 }
